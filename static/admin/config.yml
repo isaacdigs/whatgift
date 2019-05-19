@@ -20,7 +20,20 @@ collections:
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
-
+  - name: "product"
+    label: "Product"
+    folder: "src/pages/product"
+    create: true
+    slug: "newproduct"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
+      - {label: Title, name: title, widget: string}
+      - {label: Image, name: image, widget: image}
+      - {label: Price, name: price, widget: number}
+      - {label: Link, name: link, widget: string, default: "http://"}
+      - {label: Date, name: date, widget: date}
+      - {label: Description, name: description, widget: text}
+      - {label: Tags, name: tags, widget: list}
   - name: "pages"
     label: "Pages"
     files:
@@ -47,6 +60,7 @@ collections:
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"
+        create: true
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
           - {label: Title, name: title, widget: string}

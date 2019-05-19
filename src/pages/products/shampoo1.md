@@ -1,6 +1,6 @@
 ---
 templateKey: 'product-page'
-path: /products
+path: /products/shampoo1
 title: 댕기머리 진기 샴푸
 image: /img/jumbotron.jpg
 heading: Great coffee with a conscience
@@ -90,7 +90,7 @@ pricing:
         - Green or roasted beans
         - Up to 4 different varieties of beans
       plan: Big
-      price: '80'
+      price: '90'
     - description: Want a few tiny batches from different varieties? Try our custom plan
       items:
         - Whatever you need
