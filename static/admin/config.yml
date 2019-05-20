@@ -26,7 +26,7 @@ collections:
     create: true
     slug: "{{title}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-post"}
       - {label: Title, name: title, widget: string}
       - {label: Image, name: image, widget: image}
       - {label: Price, name: price, widget: number}
