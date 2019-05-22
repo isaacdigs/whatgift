@@ -33,6 +33,7 @@ collections:
       - {label: Link, name: link, widget: string, default: "http://"}
       - {label: Date, name: date, widget: date}
       - {label: Description, name: description, widget: text}
+      - {label: Body, name: body, widget: markdown }
       - {label: Tags, name: tags, widget: list}
   - name: "pages"
     label: "Pages"
