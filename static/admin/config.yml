@@ -28,7 +28,7 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-post"}
       - {label: Title, name: title, widget: string}
-      - {label: Image, name: image, widget: image}
+      - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: Price, name: price, widget: number}
       - {label: Link, name: link, widget: string, default: "http://"}
       - {label: Date, name: date, widget: date}

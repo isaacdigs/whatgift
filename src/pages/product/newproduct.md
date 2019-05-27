@@ -1,7 +1,7 @@
 ---
 templateKey: product-post
 title: 댕기머리
-image: /img/jingi-shampoo.jpg
+featuredimage: /img/jingi-shampoo.jpg
 price: 6430
 link: 'https://coupa.ng/bhbAwK'
 date: 2019-05-19T09:51:24.735Z

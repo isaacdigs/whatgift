@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
@@ -49,8 +49,11 @@ class ProductRoll extends React.Component {
                 <br />
                 <br />
                 <Link className="button" to={post.fields.slug}>
-                  Keep Reading →
+                  정보
                 </Link>
+                <a className="button" href={post.frontmatter.link} target="_blank" rel="noopener noreferrer">
+                  구매
+                </a>
               </p>
             </article>
           </div>
@@ -87,6 +90,7 @@ export default () => (
               frontmatter {
                 title
                 templateKey
+                link
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost
                 featuredimage {
