@@ -1,5 +1,5 @@
 ---
-templateKey: product-page
+templateKey: product-post
 title: 댕기머리
 image: /img/jingi-shampoo.jpg
 price: 6430
