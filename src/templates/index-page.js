@@ -1,9 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-
 import Layout from '../components/Layout'
-import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 import ProductRoll from '../components/ProductRoll'
 
@@ -41,11 +39,12 @@ export const IndexPageTemplate = ({
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
             boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
+              'none',
+            backgroundColor: 'rgba(0,0,0,0)',
             color: 'white',
             lineHeight: '1',
             padding: '0.25em',
+            textAlign: 'center'
           }}
         >
           {title}
@@ -54,11 +53,12 @@ export const IndexPageTemplate = ({
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
             boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
+              'none',
+            backgroundColor: 'rgba(0,0,0,0)',
             color: 'white',
             lineHeight: '1',
             padding: '0.25em',
+            textAlign: 'center'
           }}
         >
           {subheading}
@@ -71,6 +71,8 @@ export const IndexPageTemplate = ({
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <div className="content">
+                {/* 
+                //Commented out unnecessary stuff for development
                 <div className="content">
                   <div className="tile">
                     <h1 className="title">{mainpitch.title}</h1>
@@ -95,27 +97,32 @@ export const IndexPageTemplate = ({
                     </Link>
                   </div>
                 </div>
+                */}
+
+                {/* 상품진열 */}
                 <div className="column is-12">
                   <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
-                  </h3>
-                  <BlogRoll />
-                  
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
-                  </div>
-                </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest products
+                    최근 등록 선물
                   </h3>
                   <ProductRoll />
                   
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/products">
-                      Read more
+                      상품 더 보기
+                    </Link>
+                  </div>
+                </div>
+
+                {/* 블로그 */}
+                <div className="column is-12">
+                  <h3 className="has-text-weight-semibold is-size-2">
+                    최근 이야기
+                  </h3>
+                  <BlogRoll />
+                  
+                  <div className="column is-12 has-text-centered">
+                    <Link className="btn" to="/blog">
+                      더 읽기
                     </Link>
                   </div>
                 </div>

@@ -3,7 +3,7 @@ templateKey: index-page
 title: 적절한 선물이 최고의 선물
 image: /img/presents-1913987_1280.jpg
 heading: 가장 좋은
-subheading: 딱 맞는 사람에게 딱 맞는 때
+subheading: 딱 좋은 선물 찾기
 mainpitch:
   title: Why Kaldi
   description: >

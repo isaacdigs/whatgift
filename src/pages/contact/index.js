@@ -39,7 +39,8 @@ export default class Index extends React.Component {
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1>Contact</h1>
+              <h1>선물 추천</h1>
+              <p>반응이 좋았거나 받아서 기분이 좋았던 선물을 추천해주세요!</p>
               <form
                 name="contact"
                 method="post"
@@ -58,7 +59,7 @@ export default class Index extends React.Component {
                 </div>
                 <div className="field">
                   <label className="label" htmlFor={'name'}>
-                    Your name
+                    이름
                   </label>
                   <div className="control">
                     <input
@@ -73,7 +74,7 @@ export default class Index extends React.Component {
                 </div>
                 <div className="field">
                   <label className="label" htmlFor={'email'}>
-                    Email
+                    이메일 주소
                   </label>
                   <div className="control">
                     <input
@@ -88,7 +89,7 @@ export default class Index extends React.Component {
                 </div>
                 <div className="field">
                   <label className="label" htmlFor={'message'}>
-                    Message
+                    내용
                   </label>
                   <div className="control">
                     <textarea
@@ -102,7 +103,7 @@ export default class Index extends React.Component {
                 </div>
                 <div className="field">
                   <button className="button is-link" type="submit">
-                    Send
+                    보내기
                   </button>
                 </div>
               </form>
