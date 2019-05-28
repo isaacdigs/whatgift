@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const ProductPostTemplate = ({
   content,
@@ -13,6 +14,9 @@ export const ProductPostTemplate = ({
   tags,
   title,
   helmet,
+  featuredimage,
+  price,
+  link
 }) => {
   const PostContent = contentComponent || Content
 
@@ -26,7 +30,22 @@ export const ProductPostTemplate = ({
               {title}
             </h1>
             <p>{description}</p>
+            <p>₩&nbsp;{price}</p>
+            <div className="image-box" style={{
+              maxWidth: '400px'
+
+            }}>
+              <PreviewCompatibleImage
+                        imageInfo={{
+                          image: featuredimage,
+                          alt: `featured image thumbnail for post ${
+                            title
+                          }`,
+                        }}
+              />
+            </div>
             <PostContent content={content} />
+            <a className="button" href={link} target="_blank" rel='noreferrer noopener'> 구매 </a>
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
@@ -52,6 +71,9 @@ ProductPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
+  featuredimage: PropTypes.string,
+  price: PropTypes.number,
+  link: PropTypes.string
 }
 
 const ProductPost = ({ data }) => {
@@ -74,6 +96,9 @@ const ProductPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        featuredimage={post.frontmatter.featuredimage}
+        price={post.frontmatter.price}
+        link={post.frontmatter.link}
       />
     </Layout>
   )
@@ -96,6 +121,15 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        price
+        featuredimage {
+          childImageSharp {
+            fluid(maxWidth: 400, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        link
         tags
       }
     }

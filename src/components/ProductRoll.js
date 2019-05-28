@@ -39,6 +39,9 @@ class ProductRoll extends React.Component {
                     {post.frontmatter.title}
                   </Link>
                   <span> &bull; </span>
+                  <span className="subtitle is-size-6 is-block">
+                    {post.frontmatter.price ? '₩' + post.frontmatter.price : null}
+                  </span>
                 </p>
               </header>
               <p>
@@ -88,6 +91,7 @@ export default () => (
                 title
                 templateKey
                 link
+                price
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost
                 featuredimage {
