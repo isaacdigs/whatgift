@@ -30,7 +30,7 @@ export const ProductPostTemplate = ({
               {title}
             </h1>
             <p>{description}</p>
-            <p>₩&nbsp;{price}</p>
+            <p className="subtitle">₩&nbsp;{price}</p>
             <div className="image-box" style={{
               maxWidth: '400px'
 
@@ -45,14 +45,15 @@ export const ProductPostTemplate = ({
               />
             </div>
             <PostContent content={content} />
-            <a className="button" href={link} target="_blank" rel='noreferrer noopener'> 구매 </a>
+            <br />
+            <a className="button is-link" href={link} target="_blank" rel='noreferrer noopener'> 구매하기 </a>
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
+                <h4>태그</h4>
                 <ul className="taglist">
                   {tags.map(tag => (
                     <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                      <Link className="tag is-link" to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                     </li>
                   ))}
                 </ul>
