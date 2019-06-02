@@ -53,7 +53,7 @@ class ProductRoll extends React.Component {
                     정보
                   </Link>
                   <a className="button is-link" href={post.frontmatter.link} target="_blank" rel="noopener noreferrer">
-                    구매
+                    쿠팡
                   </a>
                 </span>
               </footer>

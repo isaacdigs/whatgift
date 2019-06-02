@@ -8,13 +8,10 @@ import ProductRoll from '../components/ProductRoll'
 export const IndexPageTemplate = ({
   image,
   title,
-  heading,
   subheading,
-  mainpitch,
-  description,
-  intro,
 }) => (
   <div>
+    {/* commented out the main jumbotron
     <div
       className="full-width-image margin-top-0"
       style={{
@@ -65,6 +62,7 @@ export const IndexPageTemplate = ({
         </h3>
       </div>
     </div>
+        */}
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
@@ -101,21 +99,21 @@ export const IndexPageTemplate = ({
 
                 {/* 상품진열 */}
                 <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    최근 등록 선물
+                  <h3 className="has-text-weight-semibold is-size-3">
+                    선물 모주지?
                   </h3>
                   <ProductRoll />
                   
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/products">
-                      상품 더 보기
+                      선물 더 보기
                     </Link>
                   </div>
                 </div>
 
                 {/* 블로그 */}
                 <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
+                  <h3 className="has-text-weight-semibold is-size-3">
                     최근 이야기
                   </h3>
                   <BlogRoll />
